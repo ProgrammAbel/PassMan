@@ -36,9 +36,9 @@ def main():
     """
     print('''Welcome to PassMan, a password manager written in Python!
 Please type in the name of the website you want to sign up/log in to:''')
-    website = input().encode()
+    website = input()
     print('Now type in the Master Password:')
-    masterpass = getpass('').encode()
+    masterpass = getpass('')
     genpasswd(website, masterpass)
 
 
