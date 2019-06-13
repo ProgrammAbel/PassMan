@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import hashlib
 from getpass import getpass
 from base64 import a85encode
