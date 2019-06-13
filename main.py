@@ -1,11 +1,12 @@
 import hashlib
+from getpass import getpass
 from base64 import a85encode
 
 print('''Welcome to PyPass, a password manager written in Python!
 Please type in the name of the website you want to sign up/log in to:''')
 website = input().encode()
 print('Now type in the Master Password:')
-masterpass = input().encode()
+masterpass = getpass('').encode()
 
 salted = website + masterpass
 hash = hashlib.sha256(salted).digest()
