@@ -4,7 +4,7 @@ setup(
     name="PassMan",
     version="0.7",
     packages=find_packages(),
-    scripts=['passman.py'],
+    scripts=['passman'],
 
     author="Abel Binoop",
     author_email="abelbinoop@live.co.uk",

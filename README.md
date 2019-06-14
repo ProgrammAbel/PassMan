@@ -14,7 +14,14 @@ python setup.py install
 ```
 
 ## Usage
-Currently you can only import this as a module when not in the repo directory. I'm making a bash entry for this, and I'll upload this once I'm done.
+To use the tool, simply type
+```
+passman
+```
+and the program will run. Alternatively you can import it as a module with
+```
+import passman
+```
 
 ## Authors
 * **Abel Binoop** - *Initial work*
