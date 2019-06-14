@@ -7,6 +7,11 @@ Most password managers store the passwords somewhere, either locally or on a sec
 
 PassMan is different - it doesn't store the password anywhere! No cloud, no cookie, no disk, nothing! Just type in the website and your Master Password and you have your password.
 
+## Prerequisites
+PassMan GUI requires these dependencies:
+
+* gobject-introspection
+
 ## Installation
 To install PassMan, clone this repository and with the repo as your current directory, run
 ```
@@ -18,7 +23,7 @@ To use the tool, simply type
 ```
 passman
 ```
-and the program will run.
+and the program will run. Alternatively choose it from your system menu.
 
 ## Authors
 * **Abel Binoop** - *Initial work*
