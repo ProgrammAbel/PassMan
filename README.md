@@ -18,14 +18,10 @@ To use the tool, simply type
 ```
 passman
 ```
-and the program will run. Alternatively you can import it as a module with
-```
-import passman
-```
+and the program will run.
 
 ## Authors
 * **Abel Binoop** - *Initial work*
 
 ## License
 This project is licensed under the GPL-3.0 license - see [LICENSE](LICENSE) for details.
-
