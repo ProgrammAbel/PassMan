@@ -5,7 +5,10 @@ setup(
     version="1.0",
     packages=find_packages(),
     scripts=['passman'],
-    include_package_data=True,
+    data_files=[
+        ('share/applications', ['com.programmabel.PassMan.desktop']),
+        ('share/passman/', ['window.glade'])
+    ],
 
     author="Abel Binoop",
     author_email="abelbinoop@live.co.uk",
