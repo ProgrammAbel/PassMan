@@ -1,46 +1,30 @@
 #!/usr/bin/env python3
-"""
-Generate/retrieve and manage passwords.
-
-Usage:
-    ./main.py
-"""
 import hashlib
-from getpass import getpass
 from base64 import a85encode
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
 
+builder = Gtk.Builder()
+builder.add_from_file("/usr/share/passman/window.glade")
 
-def genpasswd(website, masterpass):
-    """
-    Generate/retrieve a password using the website name and Master Passphrase.
+class Handler:
+    def onDestroy(self, *args):
+        Gtk.main_quit()
 
-    Args:
-        website: The name of the website you want to sign up/log in to.
-        masterpassword: Your Master Passphrase.
+    def onButtonClicked(self, button):
+        website = builder.get_object("website-entry").get_text().encode()
+        masterpass = builder.get_object("masterpass-entry").get_text().encode()
 
-    Outputs:
-        The password, generated from the website name and Master Passphrase.
-    """
-    website = website.encode()
-    masterpass = masterpass.encode()
-    salted = website + masterpass
-    hash = hashlib.sha256(salted).digest()
-    password = a85encode(hash).decode()
+        salted = website + masterpass
+        hash = hashlib.sha256(salted).digest()
+        password = a85encode(hash).decode()[:15]
 
-    print('This is your password: ', password)
+        builder.get_object("finalpass-entry").set_text(password)
 
+builder.connect_signals(Handler())
 
-def main():
-    """
-    Input the website name and Master Passphrase to generate/retrieve a password.
-    """
-    print('''Welcome to PassMan, a password manager written in Python!
-Please type in the name of the website you want to sign up/log in to:''')
-    website = input()
-    print('Now type in the Master Password:')
-    masterpass = getpass('')
-    genpasswd(website, masterpass)
+window = builder.get_object("window")
+window.show_all()
 
-
-if __name__ == '__main__':
-    main()
+Gtk.main()
