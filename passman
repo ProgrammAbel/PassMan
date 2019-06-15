@@ -18,7 +18,7 @@ class Handler:
 
         salted = website + masterpass
         hash = hashlib.sha256(salted).digest()
-        password = a85encode(hash).decode()
+        password = a85encode(hash).decode()[:15]
 
         builder.get_object("finalpass-entry").set_text(password)
 
