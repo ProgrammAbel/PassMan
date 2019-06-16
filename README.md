@@ -10,7 +10,10 @@ PassMan is different - it doesn't store the password anywhere! No cloud, no cook
 ## Prerequisites
 PassMan GUI requires these dependencies:
 
-* gobject-introspection
+* python-gobject
+* gtk3
+
+See the Wiki for more info on what dependencies are needed for each distribution.
 
 ## Installation
 To install PassMan, clone this repository and with the repo as your current directory, run
