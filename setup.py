@@ -2,12 +2,15 @@ from setuptools import setup, find_packages
 
 setup(
     name="PassMan",
-    version="1.1",
+    version="1.2",
     packages=find_packages(),
     scripts=['passman'],
     data_files=[
         ('share/applications', ['com.programmabel.PassMan.desktop']),
         ('share/passman/', ['window.glade'])
+    ],
+    install_requires=[
+        'PyGObject',
     ],
 
     author="Abel Binoop",
