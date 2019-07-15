@@ -65,6 +65,7 @@
               <object class="GtkEntry" id="website-entry">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <signal name="activate" handler="onButtonClicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -77,6 +78,7 @@
                 <property name="can_focus">True</property>
                 <property name="visibility">False</property>
                 <property name="invisible_char">●</property>
+                <signal name="activate" handler="onButtonClicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>

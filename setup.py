@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="PassMan",
-    version="1.3",
+    version="1.4",
     packages=find_packages(),
     scripts=['passman'],
     data_files=[
