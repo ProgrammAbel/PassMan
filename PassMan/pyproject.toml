@@ -1,0 +1,45 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "PassMan"
+bundle = "com.programmabel.PassMan"
+version = "0.0.1"
+url = "https://PassMan.programmabel.com/PassMan"
+license = "GNU General Public License v3 (GPLv3)"
+author = 'Abel Binoop'
+author_email = "abelbinoop@live.co.uk"
+
+[tool.briefcase.app.PassMan]
+formal_name = "PassMan"
+description = "A different kind of password manager."
+icon = "src/PassMan/resources/PassMan"
+sources = ['src/PassMan']
+requires = []
+
+
+[tool.briefcase.app.PassMan.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.PassMan.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.PassMan.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.PassMan.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.PassMan.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
