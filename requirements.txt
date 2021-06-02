@@ -26,5 +26,5 @@ toga-core==0.3.0.dev19
 toga-gtk==0.3.0.dev19
 toml==0.10.0
 travertino==0.1.2
-urllib3==1.25.8
+urllib3==1.26.5
 whichcraft==0.6.1
